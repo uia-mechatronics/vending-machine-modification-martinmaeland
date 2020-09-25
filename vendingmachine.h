@@ -5,6 +5,7 @@
 #define VENDINGMACHINE_H
 
 #include <vector>
+#include <string>
 #include <soda.h>
 
 
@@ -15,7 +16,7 @@ class VendingMachine
 public:
 
     // Constructor.
-    VendingMachine();
+    VendingMachine(std::string owner_);
 
     // Destructor.
     ~VendingMachine();
@@ -26,6 +27,9 @@ public:
     // Member function. Returns nothing and takes no parameters.
     void printInventory();
 
+    // Member function. Print menu.
+    void printMenu();
+
 
 private:
 
@@ -34,6 +38,7 @@ private:
     // good idea due to reserved names starting with __ and because auto completion of names
     // will work more smoothly.
     std::vector<Soda> sodaTypes_;
+    std::string owner_;
 
 };
 
